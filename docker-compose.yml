@@ -3,7 +3,6 @@ services:
   mariadb:
     image: bitnami/mariadb:latest
     environment:
-      # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - MARIADB_USER=bn_moodle
       - MARIADB_PASSWORD=bitnami
       - MARIADB_DATABASE=bitnami_moodle
