@@ -22,7 +22,6 @@ services:
       - MOODLE_DATABASE_PORT_NUMBER=3306  # Specifies the port number of the MariaDB service
       - MOODLE_DATABASE_USER=bn_moodle  # Sets the Moodle database username
       - MOODLE_DATABASE_NAME=bitnami_moodle  # Sets the Moodle database name
-      # ALLOW_EMPTY_PASSWORD is recommended only for development.
     volumes:
       - 'moodle_data:/bitnami/moodle'  # Mounts a volume named 'moodle_data' to store Moodle application data
       - 'moodledata_data:/bitnami/moodledata'  # Mounts a volume named 'moodledata_data' to store Moodle data
