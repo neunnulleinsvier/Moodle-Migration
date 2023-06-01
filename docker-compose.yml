@@ -14,13 +14,13 @@ services:
   moodle:
     image: bitnami/moodle:latest
     ports:
-      - '80:8080'  # Maps port 80 of the host to port 8080 of the container
+      - '80:80'  # Maps port 80 of the host to port 8080 of the container
       - '443:8443'  # Maps port 443 of the host to port 8443 of the container
     environment:
       - MOODLE_DATABASE_HOST=mariadb  # Specifies the hostname of the MariaDB service
       - MOODLE_DATABASE_PORT_NUMBER=3306  # Specifies the port number of the MariaDB service
       - MOODLE_DATABASE_USER=bn_moodle  # Sets the Moodle database username
-      - MOODLE_DATABASE_NAME=bitnami_moodle  # Sets the Moodle database name
+      - MOODLE_DATABASE_NAME=moodle  # Sets the Moodle database name
     volumes:
       - 'moodle_data:/bitnami/moodle'  # Mounts a volume named 'moodle_data' to store Moodle application data
       - 'moodledata_data:/bitnami/moodledata'  # Mounts a volume named 'moodledata_data' to store Moodle data
