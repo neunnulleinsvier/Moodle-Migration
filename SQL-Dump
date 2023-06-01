@@ -18,6 +18,9 @@
 --
 -- Table structure for table `mdl_analytics_indicator_calc`
 --
+DROP DATABASE IF EXISTS bitnami_moodle;
+CREATE DATABASE bitnami_moodle;
+USE bitnami_moodle;
 
 DROP TABLE IF EXISTS `mdl_analytics_indicator_calc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
